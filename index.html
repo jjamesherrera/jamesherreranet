@@ -25,7 +25,6 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--light-bg);
             color: #333;
-            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6, .font-serif {
@@ -40,13 +39,12 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        /* Hero Image with sophisticated overlay */
+        /* Hero Image */
         .hero-gradient {
             background: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.9)), 
                         url('https://i.postimg.cc/0Qx7kRC7/Whats-App-Image-2025-04-07-at-08-26-05.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
             height: 100vh;
             min-height: 800px;
         }
@@ -183,7 +181,7 @@
     </style>
     <link rel="shortcut icon" type="image/png" href="Favicon.png">
 </head>
-<body class="antialiased selection:bg-yellow-600 selection:text-white">
+<body class="antialiased selection:bg-yellow-600 selection:text-white overflow-x-hidden">
 
     <nav class="glass-nav fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -233,4 +231,389 @@
 
     <header class="hero-gradient flex items-center justify-center relative">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#FAFAFA] opacity-10"></div>
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center" data-aos="fade-up" data-
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-[#D4AF37] font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-4">Official Portfolio</p>
+            <h1 class="text-5xl md:text-8xl font-serif font-bold mb-6 tracking-tight text-white leading-tight">
+                James Herrera
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-gray-300 mb-8 font-serif italic">
+                International Producer, Vocalist & Sound Technician
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+                Bilingual (ENG/SPA) professional with projects signed to <span class="text-white font-medium">Sony Music Austria</span> and +100k streams, delivering world-class sound for global artists.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#services" class="btn-premium px-8 py-4 rounded font-medium tracking-wide text-sm uppercase w-full sm:w-auto shadow-lg shadow-yellow-900/20">
+                    Explore Services
+                </a>
+                <a href="#contact" class="btn-outline-premium px-8 py-4 rounded font-medium tracking-wide text-sm uppercase w-full sm:w-auto">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-16">
+                <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right">
+                    <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">The Artist</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">About James</h2>
+                    <div class="section-divider"></div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 font-light leading-relaxed">
+                        James Herrera is a music professional with expertise in songwriting, vocal production, vocal coaching, and music production. He helps artists improve their craft and assists companies with their music needs, bringing his skills in both traditional music and modern digital production.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-10 font-light leading-relaxed">
+                        With his charismatic and outgoing personality, he adapts quickly to new challenges and works effectively with teams to create impactful music projects using the latest digital tools.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8">
+                        <div>
+                            <div class="text-[#D4AF37] text-3xl mb-3"><i class="fas fa-record-vinyl"></i></div>
+                            <div class="text-xl font-bold text-gray-900 font-serif mb-1">Sony Music Artist</div>
+                            <div class="text-sm text-gray-500 leading-relaxed">Signed Releases<br>International Distribution</div>
+                        </div>
+                        <div>
+                            <div class="text-[#D4AF37] text-3xl mb-3"><i class="fas fa-microphone-alt"></i></div>
+                            <div class="text-xl font-bold text-gray-900 font-serif mb-1">Live Performer</div>
+                            <div class="text-sm text-gray-500 leading-relaxed">Cibeles (75k+ people)<br>TRF (Austrian TV 500k+)</div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="100">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Vocal Production</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Professional recording and processing for pristine, industry-standard vocals.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition mt-0 sm:mt-8">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Songwriting</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Crafting memorable melodies, toplines, and compelling lyrical concepts.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Vocal Coaching</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Helping artists develop their unique vocal style and studio presence.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition mt-0 sm:mt-8">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Music Production</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Full production services from initial concept to the final master.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">Portfolio</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Selected Works</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Featured Projects including releases via Sony Music Austria and international collaborations.</p>
+            </div>
+          
+            <div class="rounded-2xl overflow-hidden shadow-2xl shadow-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                <iframe style="border-radius:16px" src="https://open.spotify.com/embed/playlist/0MVyLNwcplPH6rxbqszsvW?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">What I Offer</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Bespoke Production</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+          
+            <div class="md:flex md:space-x-12 items-center">
+                <div class="md:w-5/12 mb-12 md:mb-0" data-aos="fade-right">
+                    <div class="service-card p-10 rounded-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-bl-full -z-10 opacity-50"></div>
+                        
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-gray-900">Studio Package</h3>
+                                <p class="text-gray-500 text-sm mt-1">Complete vocal & instrumental production</p>
+                            </div>
+                            <div class="bg-[#D4AF37] text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Premium</div>
+                        </div>
+                      
+                        <ul class="space-y-4 mb-8 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Lead Vocal Recording & Production</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Vocal Arrangement & Harmonies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Background Vocals & Choirs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Vocal stems on WAV 48kHz files</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>You keep 100% mechanical rights</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span class="font-medium text-gray-900">Publishing / Performing splits negotiated</span>
+                            </li>
+                        </ul>
+                      
+                        <div class="mb-8 pt-6 border-t border-gray-100">
+                            <h4 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Included Extras</h4>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-guitar text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Inst. Prod</p>
+                                </div>
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-sliders-h text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Mix/Master</p>
+                                </div>
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-video text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Studio Cam</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <a href="#contact" class="block w-full btn-premium text-center py-4 rounded font-bold tracking-wide uppercase text-sm">
+                            Book Session
+                        </a>
+                    </div>
+                </div>
+              
+                <div class="md:w-7/12 pl-0 md:pl-8" data-aos="fade-left">
+                    <h3 class="text-3xl font-serif font-bold text-gray-900 mb-8">Why work together?</h3>
+                  
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">1</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Industry Standard Quality</h4>
+                                <p class="text-gray-500 font-light">Top-notch equipment and techniques for crystal-clear vocals that stand out in any mix, ready for radio and major playlists.</p>
+                            </div>
+                        </div>
+                      
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">2</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Major Label Experience</h4>
+                                <p class="text-gray-500 font-light">Proven track record working with international partners like Sony Music. I know exactly what A&Rs and labels are looking for.</p>
+                            </div>
+                        </div>
+                      
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">3</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Seamless Process</h4>
+                                <p class="text-gray-500 font-light">From the initial brief to the final WAV delivery, the workflow is transparent, highly communicative, and tailored to your deadlines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-0 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="0">
+                <img src="https://i.postimg.cc/Y0CgF6Z9/5bfccdc0-ee42-4c10-9657-40fdff9614aa.jpg" class="w-full h-full object-cover" alt="James Herrera Studio">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://i.postimg.cc/PxYhM0GV/a206f9bb-6f38-4a36-88cc-46f16ff3a25e.jpg" class="w-full h-full object-cover" alt="Live Performance">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://i.postimg.cc/dVb8fTkH/IMG-2664.jpg" class="w-full h-full object-cover" alt="Music Production">
+                <div class="gallery-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">Network</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Collaborations</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+          
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-compact-disc text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Sony Music</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Austria</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-user-circle text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Peter Cloud</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Producer</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-wave-square text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Estenez Music</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Label</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-globe text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">+30 Artists</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="testimonial-card p-10 md:p-14 rounded relative" data-aos="zoom-in">
+                <i class="fas fa-quote-left absolute top-8 text-4xl text-gray-100 -z-0"></i>
+                <div class="relative z-10">
+                    <div class="text-[#D4AF37] text-lg mb-6 tracking-widest">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl md:text-2xl font-serif text-gray-800 leading-relaxed mb-10">
+                        "Working with James Herrera is always a journey. He is on the same thinking waves as me and understands exactly what I'm looking for. His talent in both vocal & instrumental knowledge is outstanding. Whoever hasn't tried to work with him yet, I highly recommend him!!"
+                    </p>
+                  
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full overflow-hidden mr-4 border-2 border-white shadow">
+                            <img src="https://i.postimg.cc/RhptL3xT/6f3254b5-2f6a-4232-8130-71129ade0cf6.png" alt="Peter Cloud" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Peter Cloud</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider text-[10px]">Pop Electronic Producer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-[#111111] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Let's create.</h2>
+                <p class="text-gray-400 text-lg">Contact me to discuss your next big release.</p>
+            </div>
+          
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-16">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Email</h4>
+                        <a href="mailto:info@jamesherrera.net" class="text-lg hover:text-[#D4AF37] transition">info@jamesherrera.net</a>
+                    </div>
+                  
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Phone</h4>
+                        <a href="tel:+34615781858" class="text-lg hover:text-[#D4AF37] transition">+34 615 781 858</a>
+                    </div>
+                  
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Location</h4>
+                        <p class="text-lg">Madrid & Worldwide</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-6 border-t border-gray-800 pt-12" data-aos="fade-up">
+                    <a href="https://www.instagram.com/jjamesherrera/" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://open.spotify.com/intl-es/artist/4eQFCzwxKC2wBXVrGlb2O4" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-spotify text-lg"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@JamesHerrera" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-youtube text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-600 py-8 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 James Herrera. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Navbar blur and shadow on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu on link click
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
