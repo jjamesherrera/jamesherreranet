@@ -1,693 +1,623 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>James Herrera</title>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <style>
-       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-      
-       body {
-           font-family: 'Poppins', sans-serif;
-           scroll-behavior: smooth;
-           background-color: #f8f5f2;
-       }
-      
-       .hero-gradient {
-           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/0Qx7kRC7/Whats-App-Image-2025-04-07-at-08-26-05.jpg');
-           background-size: cover;
-           background-position: center;
-           height: 100vh;
-           min-height: 800px;
-       }
-      
-       .service-card:hover {
-           transform: translateY(-10px);
-           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-       }
-      
-       .testimonial-card {
-           background: linear-gradient(135deg, #f2e9e4 0%, #e6d5c3 100%);
-       }
-      
-       .purchase-btn {
-           background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-           transition: all 0.3s ease;
-       }
-      
-       .purchase-btn:hover {
-           transform: translateY(-2px);
-           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-       }
-      
-       .nav-link {
-           position: relative;
-       }
-      
-       .nav-link::after {
-           content: '';
-           position: absolute;
-           width: 0;
-           height: 2px;
-           bottom: -2px;
-           left: 0;
-           background-color: #a9927d;
-           transition: width 0.3s ease;
-       }
-      
-       .nav-link:hover::after {
-           width: 100%;
-       }
-      
-       .client-logo {
-           filter: grayscale(100%);
-           opacity: 0.7;
-           transition: all 0.3s ease;
-       }
-      
-       .client-logo:hover {
-           filter: grayscale(0);
-           opacity: 1;
-       }
-      
-       h1, h2, h3, h4, h5, h6 {
-           font-family: 'Playfair Display', serif;
-           color: #5e53f;
-       }
-      
-       .section-divider {
-           width: 80px;
-           height: 3px;
-           background-color: #a9927d;
-       }
-      
-       .bg-natural-50 {
-           background-color: #f8f5f2;
-       }
-      
-       .bg-natural-100 {
-           background-color: #f2e9e4;
-       }
-      
-       .text-natural-700 {
-           color: #5e503f;
-       }
-      
-       .text-natural-600 {
-           color: #7a6b5a;
-       }
-      
-       .border-natural-200 {
-           border-color: #e6d5c3;
-       }
-      
-       .gallery-grid {
-           display: grid;
-           grid-template-columns: repeat(3, 1fr);
-           gap: 20px;
-       }
-      
-       .gallery-item {
-           overflow: hidden;
-           border-radius: 8px;
-           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-       }
-      
-       .gallery-item img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           transition: transform 0.3s ease;
-       }
-      
-       .gallery-item:hover img {
-           transform: scale(1.05);
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Herrera | Productor Musical Internacional</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+        
+        :root {
+            --accent-gold: #D4AF37;
+            --accent-gold-hover: #b5952f;
+            --dark-bg: #111111;
+            --light-bg: #FAFAFA;
+        }
 
-       .hero-btn {
-           background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-           transition: all 0.3s ease;
-           color: black !important;
-       }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+        }
 
-       .hero-btn:hover {
-           transform: translateY(-3px);
-           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-       }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
 
-       .hero-outline-btn {
-           border: 2px solid #a9927d;
-           transition: all 0.3s ease;
-       }
+        /* Sleek Nav Glass Effect */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
 
-       .hero-outline-btn:hover {
-           background-color: #a9927d;
-           color: white;
-           transform: translateY(-3px);
-           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-       }
+        /* Hero Image */
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.9)), 
+                        url('https://i.postimg.cc/0Qx7kRC7/Whats-App-Image-2025-04-07-at-08-26-05.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            min-height: 800px;
+        }
 
-       .translate-btn {
-           background-color: #FFA500;
-           color: black;
-           border-radius: 9999px;
-           padding: 0.5rem 1rem;
-           font-weight: 500;
-           transition: all 0.3s ease;
-       }
+        /* Buttons Premium */
+        .btn-premium {
+            background-color: var(--accent-gold);
+            color: #fff !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-premium::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: var(--dark-bg);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
 
-       .translate-btn:hover {
-           background-color: #FF8C00;
-           transform: translateY(-2px);
-       }
-   </style>
-   <link rel="shortcut icon" type="image/png" href="Favicon.png">
+        .btn-premium:hover::after {
+            height: 100%;
+        }
+
+        .btn-outline-premium {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+            transition: all 0.4s ease;
+        }
+
+        .btn-outline-premium:hover {
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+        }
+
+        /* Elegant Underline Hover for Nav */
+        .nav-link {
+            position: relative;
+            color: #111;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        /* Section Dividers */
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Gallery slick hover */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.7s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Testimonial Quote */
+        .testimonial-card {
+            background: #fff;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+        }
+
+        /* Client Logos */
+        .client-logo {
+            filter: grayscale(100%) opacity(0.5);
+            transition: all 0.4s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%) opacity(1);
+            transform: translateY(-5px);
+        }
+    </style>
+    <link rel="shortcut icon" type="image/png" href="Favicon.png">
 </head>
-<body class="bg-natural-50">
-   <!-- Navegación -->
-   <nav class="bg-white shadow-sm fixed w-full z-10">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="flex justify-between h-16">
-               <div class="flex items-center">
-                   <span class="text-xl font-bold text-natural-700">James Herrera</span>
-               </div>
-               <div href="Https://jamesherrera.net" class="hidden md:flex items-center space-x-8">
-                   <a href="#about" class="nav-link text-gray-700 hover:text-natural-700">Acerca de</a>
-                   <a href="#work" class="nav-link text-gray-700 hover:text-natural-700">Mi Trabajo</a>
-                   <a href="#services" class="nav-link text-gray-700 hover:text-natural-700">Servicios</a>
-                   <a href="#clients" class="nav-link text-gray-700 hover:text-natural-700">Clientes</a>
-                   <a href="#testimonials" class="nav-link text-gray-700 hover:text-natural-700">Testimonios</a>
-                   <a href="#contact" class="nav-link text-gray-700 hover:text-natural-700">Contacto</a>
-                   <a href="Https://jamesherrera.net" class="translate-btn flex items-center">
-<i class="fas fa-language mr-2"></i>
-                       English
-                   </a>
-               </div>
-               <div class="md:hidden flex items-center">
-                   <button class="mobile-menu-button">
-                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                       </svg>
-                   </button>
-               </div>
-           </div>
-       </div>
-   </nav>
+<body class="antialiased selection:bg-yellow-600 selection:text-white overflow-x-hidden">
 
-   <!-- Menú Móvil -->
-   <div class="mobile-menu hidden md:hidden fixed w-full bg-white z-20 shadow-lg">
-       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-           <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Acerca de</a>
-           <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Mi Trabajo</a>
-           <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Servicios</a>
-           <a href="#clients" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Clientes</a>
-           <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Testimonios</a>
-           <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50">Contacto</a>
-                   <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-natural-700 hover:bg-gray-50 flex items-center">
-<i class="fas fa-language mr-2"></i>
-               English
-           </a>
-       </div>
-   </div>
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-serif font-bold text-gray-900 tracking-tight">
+                        JAMES<span class="text-[#D4AF37]">HERRERA</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link">Sobre mí</a>
+                    <a href="#work" class="nav-link">Mi Trabajo</a>
+                    <a href="#services" class="nav-link">Servicios</a>
+                    <a href="#clients" class="nav-link">Clientes</a>
+                    <a href="#testimonials" class="nav-link">Testimonios</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                    <a href="index.html" class="flex items-center text-xs font-semibold tracking-wider uppercase border border-gray-300 px-3 py-1.5 rounded-full hover:border-[#D4AF37] hover:text-[#D4AF37] transition">
+                        <i class="fas fa-globe mr-2"></i> EN
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-   <!-- Sección Hero -->
-   <header class="hero-gradient pt-24 pb-20 md:pt-32 md:pb-28 text-white flex items-center">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-           <div class="text-center">
-               <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">James Herrera</h1>
-               <h2 class="text-3xl md:text-4xl font-medium mb-14 italic" style="color: #f8f5f2;">Productor Internacional, Vocalista & Técnico de Sonido</h2>
-<p class="text-xl md:text-xl mb-14 max-w-3xl mx-auto leading-relaxed text-white">Profesional bilingüe (ING/ESP) con proyectos firmados con Sony Music Austria y +100k reproducciones, ofreciendo calidad profesional para artistas globales.</p>
-<div class="flex justify-center space-x-6">
-                   <a href="#services" class="hero-btn text-black px-5 py-5 rounded-full font-medium transition duration-300 text-lg">Explorar Servicios</a>
-                   <a href="#contact" class="hero-outline-btn text-white px-5 py-5 rounded-full font-medium transition duration-300 text-lg">Ponerse en Contacto</a>
-               </div>
-           </div>
-       </div>
-   </header>
+    <div class="mobile-menu hidden fixed w-full h-screen bg-white z-40 top-0 pt-24 px-6 shadow-2xl">
+        <div class="flex flex-col space-y-6 text-center">
+            <a href="#about" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Sobre mí</a>
+            <a href="#work" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Mi Trabajo</a>
+            <a href="#services" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Servicios</a>
+            <a href="#clients" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Clientes</a>
+            <a href="#testimonials" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Testimonios</a>
+            <a href="#contact" class="text-2xl font-serif text-gray-800 hover:text-[#D4AF37]">Contacto</a>
+            <div class="pt-6 border-t border-gray-100">
+                <a href="index.html" class="inline-flex items-center text-lg text-gray-500 hover:text-[#D4AF37]">
+                    <i class="fas fa-globe mr-2"></i> English
+                </a>
+            </div>
+        </div>
+    </div>
 
-   <!-- Sección Acerca de -->
-   <section id="about" class="py-20 bg-white">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Acerca de James</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
-          
-           <div class="md:flex md:items-center md:space-x-12">
-               <div class="md:w-1/2 mb-10 md:mb-0">
-                   <p class="text-lg text-gray-600 mb-6">James Herrera es un profesional de la música con experiencia en composición, producción vocal, coaching vocal y producción musical. Ayuda a artistas a mejorar su arte y asiste a empresas con sus necesidades musicales, aportando sus habilidades tanto en música tradicional como en producción digital moderna.</p>
-                   <p class="text-lg text-gray-600 mb-8">James mejora los proyectos musicales utilizando las últimas herramientas digitales para optimizar el proceso creativo. Con su personalidad carismática y extrovertida, se adapta rápidamente a nuevos desafíos y trabaja eficazmente con equipos para crear proyectos musicales impactantes.</p>
-                       <div class="grid grid-cols-2 gap-8">
-                           <div class="text-center">
-                               <div class="text-natural-700 text-4xl mb-2"><i class="fas fa-record-vinyl"></i></div>
-                               <div class="text-2xl font-bold text-natural-700">Artista de Sony Music</div>
-                               <div class="text-gray-600">Lanzamientos firmados<br>Distribución Internacional</div>
-                           </div>
-                           <div class="text-center">
-                               <div class="text-natural-700 text-4xl mb-2"><i class="fas fa-microphone-alt"></i></div>
-                               <div class="text-2xl font-bold text-natural-700">Artista en Vivo</div>
-                               <div class="text-gray-600">Cibeles (75k+ personas)<br>TRF (Televisión Nacional Austriaca 500k+ espectadores)</div>
-                           </div>
-                       </div>
-               </div>
+    <header class="hero-gradient flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#FAFAFA] opacity-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-[#D4AF37] font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-4">Portafolio Oficial</p>
+            <h1 class="text-5xl md:text-8xl font-serif font-bold mb-6 tracking-tight text-white leading-tight">
+                James Herrera
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-gray-300 mb-8 font-serif italic">
+                Productor Internacional, Vocalista y Técnico de Sonido
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+                Profesional bilingüe (ING/ESP) con proyectos firmados con <span class="text-white font-medium">Sony Music Austria</span> y +100k reproducciones, entregando sonido de primera clase para artistas globales.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#services" class="btn-premium px-8 py-4 rounded font-medium tracking-wide text-sm uppercase w-full sm:w-auto shadow-lg shadow-yellow-900/20">
+                    Explorar Servicios
+                </a>
+                <a href="#contact" class="btn-outline-premium px-8 py-4 rounded font-medium tracking-wide text-sm uppercase w-full sm:w-auto">
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-16">
+                <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right">
+                    <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">El Artista</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Sobre James</h2>
+                    <div class="section-divider"></div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 font-light leading-relaxed">
+                        James Herrera es un profesional de la música con experiencia en composición, producción vocal, entrenamiento vocal y producción musical. Ayuda a los artistas a perfeccionar su arte y asiste a empresas con sus necesidades musicales, aportando sus habilidades tanto en la música tradicional como en la producción digital moderna.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-10 font-light leading-relaxed">
+                        Con su personalidad carismática y extrovertida, se adapta rápidamente a nuevos desafíos y trabaja eficazmente en equipo para crear proyectos musicales impactantes utilizando las últimas herramientas digitales.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8">
+                        <div>
+                            <div class="text-[#D4AF37] text-3xl mb-3"><i class="fas fa-record-vinyl"></i></div>
+                            <div class="text-xl font-bold text-gray-900 font-serif mb-1">Artista de Sony Music</div>
+                            <div class="text-sm text-gray-500 leading-relaxed">Lanzamientos Firmados<br>Distribución Internacional</div>
+                        </div>
+                        <div>
+                            <div class="text-[#D4AF37] text-3xl mb-3"><i class="fas fa-microphone-alt"></i></div>
+                            <div class="text-xl font-bold text-gray-900 font-serif mb-1">Intérprete en Directo</div>
+                            <div class="text-sm text-gray-500 leading-relaxed">Cibeles (+75k personas)<br>TRF (TV Austriaca +500k)</div>
+                        </div>
+                    </div>
+                </div>
               
-               <div class="md:w-1/2">
-                   <div class="grid grid-cols-2 gap-4">
-                       <div class="bg-natural-100 p-6 rounded-lg">
-                           <div class="text-natural-700 text-3xl mb-3">
-                               <i class="fas fa-microphone"></i>
-                           </div>
-                           <h3 class="font-semibold text-lg mb-2">Producción Vocal</h3>
-                           <p class="text-gray-600">Grabación y procesamiento profesional para las voces más limpias.</p>
-                       </div>
-                       <div class="bg-natural-100 p-6 rounded-lg">
-                           <div class="text-natural-700 text-3xl mb-3">
-                               <i class="fas fa-music"></i>
-                           </div>
-                           <h3 class="font-semibold text-lg mb-2">Composición</h3>
-                           <p class="text-gray-600">Creación de melodías memorables y letras convincentes.</p>
-                       </div>
-                       <div class="bg-natural-100 p-6 rounded-lg">
-                           <div class="text-natural-700 text-3xl mb-3">
-                               <i class="fas fa-headphones"></i>
-                           </div>
-                           <h3 class="font-semibold text-lg mb-2">Coaching Vocal</h3>
-                           <p class="text-gray-600">Ayudo a artistas a desarrollar su estilo vocal único.</p>
-                       </div>
-                       <div class="bg-natural-100 p-6 rounded-lg">
-                           <div class="text-natural-700 text-3xl mb-3">
-                               <i class="fas fa-sliders-h"></i>
-                           </div>
-                           <h3 class="font-semibold text-lg mb-2">Producción Musical</h3>
-                           <p class="text-gray-600">Servicios de producción completos desde la demo hasta el master final.</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="100">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Producción Vocal</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Grabación y procesamiento profesional para voces impecables y con estándar de la industria.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition mt-0 sm:mt-8">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Composición</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Creación de melodías memorables, toplines y conceptos líricos cautivadores.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Vocal Coaching</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Ayudando a los artistas a desarrollar su estilo vocal único y su presencia en el estudio.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition mt-0 sm:mt-8">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Producción Musical</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Servicios de producción completos, desde el concepto inicial hasta el máster final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Sección Mi Trabajo -->
-   <section id="work" class="py-20 bg-natural-50">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Mi Trabajo</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
+    <section id="work" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">Portafolio</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Trabajos Destacados</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Proyectos destacados, incluyendo lanzamientos a través de Sony Music Austria y colaboraciones internacionales.</p>
+            </div>
           
-           <div class="max-w-3xl mx-auto">
-               <h3 class="text-xl font-semibold text-center mb-8">Proyectos Destacados (Sony Music Austria & Colaboraciones Internacionales)</h3>
-               <div class="rounded-xl overflow-hidden shadow-lg">
-                   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0MVyLNwcplPH6rxbqszsvW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-               </div>
-           </div>
-       </div>
-   </section>
+            <div class="rounded-2xl overflow-hidden shadow-2xl shadow-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                <iframe style="border-radius:16px" src="https://open.spotify.com/embed/playlist/0MVyLNwcplPH6rxbqszsvW?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
 
-   <!-- Sección Servicios -->
-   <section id="services" class="py-20 bg-white">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Servicios de Producción Personalizados</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
+    <section id="services" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">Lo que Ofrezco</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Producción a Medida</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
           
-           <div class="md:flex md:space-x-8">
-               <div class="md:w-1/2 mb-12 md:mb-0">
-                   <div class="bg-natural-100 p-8 rounded-xl shadow-md service-card transition duration-300">
-                       <div class="flex justify-between items-start mb-6">
-                           <div>
-                               <h3 class="text-2xl font-bold text-black mb-2">Paquetes de Producción Personalizados</h3>
-                           </div>
-                           <div class="bg-natural-200 text-natural-700 px-3 py-1 rounded-full text-sm font-medium">Popular</div>
-                       </div>
+            <div class="md:flex md:space-x-12 items-center">
+                <div class="md:w-5/12 mb-12 md:mb-0" data-aos="fade-right">
+                    <div class="service-card p-10 rounded-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-bl-full -z-10 opacity-50"></div>
+                        
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-gray-900">Paquete de Estudio</h3>
+                                <p class="text-gray-500 text-sm mt-1">Producción vocal e instrumental completa</p>
+                            </div>
+                            <div class="bg-[#D4AF37] text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Premium</div>
+                        </div>
                       
-                       <ul class="space-y-3 mb-8">
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Grabación y Producción de Voz Principal</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Arreglos Vocales y Armonías</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Coros y Voces de Fondo</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Stems vocales en archivos WAV 48kHz</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Conservas todos los derechos mecánicos</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>En caso de toplining, los splits de derechos de autor / ejecución pueden negociarse.</span>
-                           </li>
-                           <li class="flex items-start">
-                               <i class="fas fa-check text-natural-700 mt-1 mr-2"></i>
-                               <span>Tú eliges el tema, James hace el resto</span>
-                           </li>
-                       </ul>
+                        <ul class="space-y-4 mb-8 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Grabación y Producción de Voz Principal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Arreglos Vocales y Armonías</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Coros y Voces de Fondo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Pistas vocales en formato WAV a 48kHz</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Conservas el 100% de los derechos mecánicos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Porcentajes de autoría (SGAE) a negociar</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i class="fas fa-check text-[#D4AF37] mt-1 mr-3 text-sm"></i>
+                                <span>Grabación / edición de contenido para Redes Sociales</span>
+                            </li>
+                        </ul>
                       
-                       <div class="mb-8">
-                           <h4 class="font-semibold text-lg mb-3 text-natural-700">BONO:</h4>
-                           <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                               <div class="bg-white p-3 rounded-lg border border-natural-200">
-                                   <div class="text-natural-700 mb-1">
-                                       <i class="fas fa-guitar"></i>
-                                   </div>
-                                   <div class="text-sm font-medium">Producción Instrumental Básica</div>
-                               </div>
-                               <div class="bg-white p-3 rounded-lg border border-natural-200">
-                                   <div class="text-natural-700 mb-1">
-                                       <i class="fas fa-sliders-h"></i>
-                                   </div>
-                                   <div class="text-sm font-medium">Mezcla y Masterización Básica</div>
-                               </div>
-                               <div class="bg-white p-3 rounded-lg border border-natural-200">
-                                   <div class="text-natural-700 mb-1">
-                                       <i class="fas fa-video"></i>
-                                   </div>
-                                   <div class="text-sm font-medium">Grabación en video del proceso</div>
-                               </div>
-                           </div>
-                       </div>
-                       <a href="#contact" class="block w-full purchase-btn text-black text-center py-3 px-6 rounded-lg font-semibold">
-                           Reservar una Consulta
-                       </a>
-                   </div>
-               </div>
-              
-               <div class="md:w-1/2">
-                   <h3 class="text-2xl font-bold text-natural-700 mb-6">¿Por qué elegir este servicio?</h3>
-                  
-                   <div class="space-y-6">
-                       <div class="flex">
-                           <div class="flex-shrink-0">
-                               <div class="flex items-center justify-center h-12 w-12 rounded-full bg-natural-100 text-natural-700">
-                                   <span class="text-xl font-bold">1</span>
-                               </div>
-                           </div>
-                           <div class="ml-4">
-                               <h4 class="text-lg font-semibold text-natural-700">Calidad profesional de estudio</h4>
-                               <p class="text-gray-600 mt-1">Equipamiento de primera clase para voces cristalinas que destacan en cualquier mezcla.</p>
-                           </div>
-                       </div>
+                        <div class="mb-8 pt-6 border-t border-gray-100">
+                            <h4 class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4">Extras Incluidos</h4>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-guitar text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Prod. Inst.</p>
+                                </div>
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-sliders-h text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Mix/Máster</p>
+                                </div>
+                                <div class="text-center p-2 rounded bg-gray-50">
+                                    <i class="fas fa-video text-[#D4AF37] mb-2"></i>
+                                    <p class="text-[10px] font-medium text-gray-600 uppercase">Contenido RRSS</p>
+                                </div>
+                            </div>
+                        </div>
                       
-                       <div class="flex">
-                           <div class="flex-shrink-0">
-                               <div class="flex items-center justify-center h-12 w-12 rounded-full bg-natural-100 text-natural-700">
-                                   <span class="text-xl font-bold">2</span>
-                               </div>
-                           </div>
-                           <div class="ml-4">
-                               <h4 class="text-lg font-semibold text-natural-700">Experiencia en Grandes Discográficas</h4>
-                               <p class="text-gray-600 mt-1">Trabajando con socios como Sony Music para ofrecer resultados excepcionales y estándar de la industria.</p>
-                           </div>
-                       </div>
+                        <a href="#contact" class="block w-full btn-premium text-center py-4 rounded font-bold tracking-wide uppercase text-sm">
+                            Reservar Sesión
+                        </a>
+                    </div>
+                </div>
+              
+                <div class="md:w-7/12 pl-0 md:pl-8" data-aos="fade-left">
+                    <h3 class="text-3xl font-serif font-bold text-gray-900 mb-8">¿Por qué trabajar juntos?</h3>
+                  
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">1</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Calidad Estándar de la Industria</h4>
+                                <p class="text-gray-500 font-light">Equipamiento y técnicas de primer nivel para voces cristalinas que destacan en cualquier mezcla, listas para la radio y las principales playlists.</p>
+                            </div>
+                        </div>
                       
-                       <div class="flex">
-                           <div class="flex-shrink-0">
-                               <div class="flex items-center justify-center h-12 w-12 rounded-full bg-natural-100 text-natural-700">
-                                   <span class="text-xl font-bold">3</span>
-                               </div>
-                           </div>
-                           <div class="ml-4">
-                               <h4 class="text-lg font-semibold text-natural-700">Paquete completo</h4>
-                               <p class="text-gray-600 mt-1">Incluyendo producción instrumental y conceptos básicos de mezcla y masterización para un sonido pulido.</p>
-                           </div>
-                       </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">2</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Experiencia con Grandes Discográficas</h4>
+                                <p class="text-gray-500 font-light">Historial comprobado trabajando con socios internacionales como Sony Music. Sé exactamente lo que buscan los A&R y los sellos.</p>
+                            </div>
+                        </div>
                       
-                       <div class="flex">
-                           <div class="flex-shrink-0">
-                               <div class="flex items-center justify-center h-12 w-12 rounded-full bg-natural-100 text-natural-700">
-                                   <span class="text-xl font-bold">4</span>
-                               </div>
-                           </div>
-                           <div class="ml-4">
-                               <h4 class="text-lg font-semibold text-natural-700">Contenido de video adicional</h4>
-                               <p class="text-gray-600 mt-1">Documentar el proceso agrega valor a tus esfuerzos promocionales y redes sociales.</p>
-                           </div>
-                       </div>
-                   </div>
-                  
-                   <div class="mt-12 bg-natural-50 p-6 rounded-lg border border-natural-200">
-                       <h4 class="font-semibold text-lg mb-3">¿No estás seguro si esto es adecuado para ti?</h4>
-                       <p class="text-gray-600 mb-4">Programa una consulta gratuita de 15 minutos para discutir las necesidades de tu proyecto.</p>
-                       <a href="#contact" class="inline-block purchase-btn text-black py-2 px-6 rounded-lg font-medium hover:bg-natural-600 transition duration-300">
-                           Contactar a James
-                       </a>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded flex items-center justify-center bg-white shadow border border-gray-100 text-[#D4AF37] font-bold font-serif text-lg">3</div>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Proceso Fluido</h4>
+                                <p class="text-gray-500 font-light">Desde el briefing inicial hasta la entrega final del WAV, el flujo de trabajo es transparente, altamente comunicativo y adaptado a tus plazos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Sección Clientes -->
-   <section id="clients" class="py-20 bg-natural-50">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Clientes y Colaboraciones</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
+    <section class="py-0 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="0">
+                <img src="https://i.postimg.cc/Y0CgF6Z9/5bfccdc0-ee42-4c10-9657-40fdff9614aa.jpg" class="w-full h-full object-cover" alt="James Herrera Studio">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://i.postimg.cc/PxYhM0GV/a206f9bb-6f38-4a36-88cc-46f16ff3a25e.jpg" class="w-full h-full object-cover" alt="Live Performance">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item h-64 md:h-80" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://i.postimg.cc/dVb8fTkH/IMG-2664.jpg" class="w-full h-full object-cover" alt="Music Production">
+                <div class="gallery-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-2">Red de Contactos</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Colaboraciones</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
           
-           <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-               <div class="text-center">
-                   <div class="bg-white p-6 rounded-lg shadow-sm h-full flex flex-col items-center justify-center client-logo">
-                       <div class="text-4xl text-natural-700 mb-3">
-                           <i class="fas fa-record-vinyl"></i>
-                       </div>
-                       <h3 class="font-semibold">Sony Music Austria</h3>
-                       <p class="text-sm text-gray-600 mt-1">Colaboración en múltiples proyectos de producción vocal</p>
-                   </div>
-               </div>
-              
-               <div class="text-center">
-                   <div class="bg-white p-6 rounded-lg shadow-sm h-full flex flex-col items-center justify-center client-logo">
-                       <div class="text-4xl text-natural-700 mb-3">
-                           <i class="fas fa-user-tie"></i>
-                       </div>
-                       <h3 class="font-semibold">Peter Cloud</h3>
-                       <p class="text-sm text-gray-600 mt-1">Arreglos vocales y co-producción</p>
-                   </div>
-               </div>
-              
-               <div class="text-center">
-                   <div class="bg-white p-6 rounded-lg shadow-sm h-full flex flex-col items-center justify-center client-logo">
-                       <div class="text-4xl text-natural-700 mb-3">
-                           <i class="fas fa-music"></i>
-                       </div>
-                       <h3 class="font-semibold">Estenez Music</h3>
-                       <p class="text-sm text-gray-600 mt-1">Composición y producción vocal</p>
-                   </div>
-               </div>
-              
-               <div class="text-center">
-                   <div class="bg-white p-6 rounded-lg shadow-sm h-full flex flex-col items-center justify-center client-logo">
-                       <div class="text-4xl text-natural-700 mb-3">
-                           <i class="fas fa-users"></i>
-                       </div>
-                       <h3 class="font-semibold">Artistas Independientes</h3>
-                       <p class="text-sm text-gray-600 mt-1">Trabajado con más de 30 artistas independientes mundialmente</p>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-compact-disc text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Sony Music</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Austria</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-user-circle text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Peter Cloud</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Productor</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-wave-square text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">Estenez Music</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Sello</p>
+                </div>
+                <div class="client-logo flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-globe text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 text-center">+30 Artistas</h3>
+                    <p class="text-xs text-center text-gray-500 uppercase tracking-wide">Mundial</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Sección Galería -->
-   <section class="py-20 bg-white">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="gallery-grid">
-               <div class="gallery-item">
-                   <img src="https://i.postimg.cc/Y0CgF6Z9/5bfccdc0-ee42-4c10-9657-40fdff9614aa.jpg" alt="James Herrera en el estudio">
-               </div>
-               <div class="gallery-item">
-                   <img src="https://i.postimg.cc/PxYhM0GV/a206f9bb-6f38-4a36-88cc-46f16ff3a25e.jpg" alt="James Herrera actuando">
-               </div>
-               <div class="gallery-item">
-                   <img src="https://i.postimg.cc/dVb8fTkH/IMG-2664.jpg" alt="James Herrera trabajando">
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Sección Testimonios -->
-   <section id="testimonials" class="py-20 bg-white">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que Dicen los Clientes</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
-          
-           <div class="max-w-3xl mx-auto">
-               <div class="testimonial-card p-8 md:p-10 rounded-xl">
-                   <div class="text-yellow-400 text-2xl mb-4">
-                       <i class="fas fa-star"></i>
-                       <i class="fas fa-star"></i>
-                       <i class="fas fa-star"></i>
-                       <i class="fas fa-star"></i>
-                       <i class="fas fa-star"></i>
-                   </div>
-                   <p class="text-lg italic text-gray-700 mb-8">"Trabajar con James Herrera es siempre un viaje. Está en la misma sintonía que yo y entiende exactamente lo que busco. Su talento tanto en conocimientos vocales como instrumentales es excepcional. Quien aún no haya intentado trabajar con él, ¡se lo recomiendo encarecidamente!!"</p>
+    <section id="testimonials" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="testimonial-card p-10 md:p-14 rounded relative" data-aos="zoom-in">
+                <i class="fas fa-quote-left absolute top-8 text-4xl text-gray-100 -z-0"></i>
+                <div class="relative z-10">
+                    <div class="text-[#D4AF37] text-lg mb-6 tracking-widest">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl md:text-2xl font-serif text-gray-800 leading-relaxed mb-10">
+                        "Trabajar con James Herrera es siempre un viaje. Estamos en la misma onda y entiende exactamente lo que busco. Su talento y conocimiento tanto vocal como instrumental son excepcionales. A quien aún no haya trabajado con él, ¡se lo recomiendo encarecidamente!"
+                    </p>
                   
-                   <div class="flex items-center">
-                       <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                           <img src="https://i.postimg.cc/RhptL3xT/6f3254b5-2f6a-4232-8130-71129ade0cf6.png" alt="Peter Cloud" class="w-full h-full object-cover">
-                       </div>
-                       <div>
-                           <h4 class="font-semibold text-lg">Peter Cloud</h4>
-                           <p class="text-gray-600">Productor de Música Electrónica Pop</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full overflow-hidden mr-4 border-2 border-white shadow">
+                            <img src="https://i.postimg.cc/RhptL3xT/6f3254b5-2f6a-4232-8130-71129ade0cf6.png" alt="Peter Cloud" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Peter Cloud</h4>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider text-[10px]">Productor de Pop Electrónico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Sección Contacto -->
-   <section id="contact" class="py-20 bg-natural-50">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16">
-               <h2 class="text-3xl md:text-4xl font-bold mb-4">Ponerse en Contacto</h2>
-               <div class="section-divider mx-auto"></div>
-           </div>
+    <section id="contact" class="py-24 bg-[#111111] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Vamos a crear.</h2>
+                <p class="text-gray-400 text-lg">Contáctame para hablar de tu próximo gran lanzamiento.</p>
+            </div>
           
-           <div class="max-w-3xl mx-auto text-center">
-               <h3 class="text-2xl font-semibold text-natural-700 mb-6">¿Tienes un proyecto en mente?</h3>
-               <p class="text-lg text-gray-600 mb-8">Contáctame para discutir cómo podemos colaborar en tu próximo proyecto musical.</p>
-              
-               <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                   <div class="flex flex-col items-center">
-                       <div class="bg-natural-100 p-4 rounded-full text-natural-700 mb-4">
-                           <i class="fas fa-envelope text-2xl"></i>
-                       </div>
-                       <div>
-                           <h4 class="font-semibold text-natural-700">Email</h4>
-                           <a href="mailto:james@jamesherrera.net" class="text-natural-600 hover:text-natural-800">james@jamesherrera.net</a>
-                       </div>
-                   </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-16">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Email</h4>
+                        <a href="mailto:info@jamesherrera.net" class="text-lg hover:text-[#D4AF37] transition">info@jamesherrera.net</a>
+                    </div>
                   
-                   <div class="flex flex-col items-center">
-                       <div class="bg-natural-100 p-4 rounded-full text-natural-700 mb-4">
-                           <i class="fas fa-phone-alt text-2xl"></i>
-                       </div>
-                       <div>
-                           <h4 class="font-semibold text-natural-700">Teléfono</h4>
-                           <a href="tel:+34615781858" class="text-natural-600 hover:text-natural-800">+34 615 781 858</a>
-                       </div>
-                   </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Teléfono</h4>
+                        <a href="tel:+34615781858" class="text-lg hover:text-[#D4AF37] transition">+34 615 781 858</a>
+                    </div>
                   
-                   <div class="flex flex-col items-center">
-                       <div class="bg-natural-100 p-4 rounded-full text-natural-700 mb-4">
-                           <i class="fas fa-map-marker-alt text-2xl"></i>
-                       </div>
-                       <div>
-                           <h4 class="font-semibold text-natural-700">Ubicación del Estudio</h4>
-                           <p class="text-gray-600">Donde tú lo quieras!</p>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Iconos Sociales -->
-               <div class="flex justify-center space-x-4">
-                   <a href="https://www.instagram.com/jjamesherrera/" target="_blank" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-natural-100 hover:text-natural-700 transition duration-300">
-                       <i class="fab fa-instagram text-xl"></i>
-                   </a>
-                   <a href="https://open.spotify.com/intl-es/artist/4eQFCzwxKC2wBXVrGlb2O4" target="_blank" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-natural-100 hover:text-natural-700 transition duration-300">
-                       <i class="fab fa-spotify text-xl"></i>
-                   </a>
-                   <a href="https://www.youtube.com/@JamesHerrera" target="_blank" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-natural-100 hover:text-natural-700 transition duration-300">
-                       <i class="fab fa-youtube text-xl"></i>
-                   </a>
-               </div>
-           </div>
-       </div>
-   </section>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 mx-auto border border-gray-800 rounded-full flex items-center justify-center text-[#D4AF37] mb-6">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2 text-gray-500">Ubicación</h4>
+                        <p class="text-lg">Madrid y Mundial</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-6 border-t border-gray-800 pt-12" data-aos="fade-up">
+                    <a href="https://www.instagram.com/jjamesherrera/" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://open.spotify.com/intl-es/artist/4eQFCzwxKC2wBXVrGlb2O4" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-spotify text-lg"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@JamesHerrera" target="_blank" class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#D4AF37] hover:text-white transition duration-300">
+                        <i class="fab fa-youtube text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Pie de Página -->
-   <footer class="bg-natural-800 text-white py-12">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="flex flex-col md:flex-row justify-between items-start">
-               <div class="mb-6 md:mb-0 md:w-1/2">
-                   <span class="text-xl font-bold text-brown-600" style="color: #8B4513;">James Herrera</span>
-                   <p class="text-gray-400 mt-2">Cantante-Compositor & Productor Vocal</p>
-               </div>
-              
-               <div class="md:w-1/2">
-                   <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-brown-600" style="color: #8B4513;">Enlaces Rápidos</h4>
-                   <ul class="grid grid-cols-2 gap-x-8 gap-y-2">
-                       <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Acerca de</a></li>
-                       <li><a href="#work" class="text-gray-400 hover:text-white transition duration-300">Mi Trabajo</a></li>
-                       <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
-                       <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
-                   </ul>
-               </div>
-           </div>
-          
-           <div class="mt-8 pt-8 border-t border-natural-700 text-center">
-               <p class="text-gray-400">&copy; 2026 James Herrera. Todos los derechos reservados.</p>
-           </div>
-       </div>
-   </footer>
+    <footer class="bg-black text-gray-600 py-8 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 James Herrera. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-   <script>
-       // Toggle del menú móvil
-       const mobileMenuButton = document.querySelector('.mobile-menu-button');
-       const mobileMenu = document.querySelector('.mobile-menu');
-      
-       mobileMenuButton.addEventListener('click', () => {
-           mobileMenu.classList.toggle('hidden');
-       });
-      
-       // Cerrar menú móvil al hacer clic en un enlace
-       const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-       mobileMenuLinks.forEach(link => {
-           link.addEventListener('click', () => {
-               mobileMenu.classList.add('hidden');
-           });
-       });
-      
-       // Desplazamiento suave para todos los enlaces
-       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-           anchor.addEventListener('click', function (e) {
-               e.preventDefault();
-              
-               const targetId = this.getAttribute('href');
-               if (targetId === '#') return;
-              
-               const targetElement = document.querySelector(targetId);
-               if (targetElement) {
-                   window.scrollTo({
-                       top: targetElement.offsetTop - 80,
-                       behavior: 'smooth'
-                   });
-               }
-           });
-       });
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
 
-       // Funcionalidad del botón de traducción
-       const translateBtn = document.getElementById('translateBtn');
-       const mobileTranslateBtn = document.getElementById('mobileTranslateBtn');
-       
-       function translateToEnglish() {
-           // Esto es un marcador de posición - en una implementación real:
-           // 1. Tendrías traducciones para todo el contenido de texto
-           // 2. Usarías una librería o API de traducción
-           // 3. Alternarías entre idiomas
-           alert('Esto traduciría la página al inglés en una implementación real');
-       }
-       
-       translateBtn.addEventListener('click', translateToEnglish);
-       mobileTranslateBtn.addEventListener('click', translateToEnglish);
-   </script>
-   <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+        // Navbar blur and shadow on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu on link click
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
