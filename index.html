@@ -211,20 +211,20 @@
         }
     </style>
     <link rel="shortcut icon" type="image/png" href="Favicon.png?v=3">
-    <script>
-        // Evitamos un bucle infinito: solo redirigimos si es su primera vez en la web
-        if (!localStorage.getItem('idioma_revisado')) {
-            localStorage.setItem('idioma_revisado', 'true');
-            
-            // Leemos el idioma principal de su navegador (ej: "es", "es-ES", "en-US")
-            var idiomaUsuario = navigator.language || navigator.userLanguage;
-            
-            // Si el idioma empieza por "es" (español de cualquier país), lo mandamos a ES.html
-            if (idiomaUsuario.toLowerCase().startsWith('es')) {
-                window.location.href = 'ES.html';
-            }
-        }
-    </script>
+  <script>
+    // Detectamos el idioma del navegador
+    var idiomaUsuario = navigator.language || navigator.userLanguage;
+    var esEspanol = idiomaUsuario.toLowerCase().startsWith('es');
+    
+    // Comprobamos de dónde viene el usuario
+    // Si viene de ES.html, es que ha pulsado el botón de "EN" manualmente
+    var vieneDePaginaEspanol = document.referrer.indexOf('ES.html') !== -1;
+
+    // Solo redirigimos si es español Y NO viene de la página en español
+    if (esEspanol && !vieneDePaginaEspanol) {
+        window.location.href = 'ES.html';
+    }
+</script>
 </head>
 <body class="antialiased selection:bg-yellow-600 selection:text-white overflow-x-hidden w-full max-w-[100vw]">
 
